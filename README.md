@@ -1,3 +1,3 @@
 # Leetcode-solutions
 My Leetcode solutions and DSA practice
-LeetCode: [piyushraj519](https://leetcode.com/u/piyushraj5919/)
+LeetCode: [piyushraj5919](https://leetcode.com/u/piyushraj5919/)
