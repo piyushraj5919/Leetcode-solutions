@@ -5,9 +5,9 @@ class Solution {
 
         while(i <= (haystack.length() - needle.length())){
             int count = 0;
-            int j = 0;
+            // int j = 0;
             int k = i;
-            if(haystack.charAt(i) == needle.charAt(j)){
+            if(haystack.charAt(i) == needle.charAt(0)){
                 for(int l = 0 ; l < needle.length(); l++){
                     if(haystack.charAt(k) == needle.charAt(l)){
                         count++;
