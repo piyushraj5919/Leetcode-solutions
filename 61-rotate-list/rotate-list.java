@@ -18,22 +18,26 @@ class Solution {
         int count = 0;
         ListNode q = head;
 
-        while(q!= null){
+        while(q != null){
             count++;
             q = q.next;
         }
         int rotation = k % count;
-
-        for(int j = 1; j <= rotation ; j++){
-            ListNode p = head;
-            for(int i = 1 ; i < count-1; i++){
-                p = p.next;
-            }
-            ListNode temp = p.next;
-            p.next = null;
-            temp.next = head;
-            head = temp;
+        if(rotation == 0){
+            return head;
         }
-        return head;
+        ListNode temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = head;
+    
+        ListNode p = head;
+        for(int i = 1; i < count-rotation; i++){
+            p = p.next;
+        }
+        ListNode newhead = p.next;
+        p.next = null;
+        return newhead;
     }
 }
